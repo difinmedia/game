@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+	<head>
+           <title/>
+                  <b:skin><![CDATA[
+                  
+                  .fullscreen, .fullscreenExit{background:#000;color:#fff;text-decoration:none;padding:10px 20px;border-radius:3px}
+
+                  
+                  ]]></b:skin>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>	
+</head>
+    <body>
+    <b:section class='main' id='main'/>
+<center><a class='fullscreen' href='#' title='Layar Penuh'>Full Screen</a>
+<a class='fullscreenExit' href='#' style='display:none;' title='Keluar Layar Penuh'>Close FullScreen</a></center>
+           <iframe src="https://www.onlinegame.co.id/gameframe/subway-clash-remastered?v20190522184911e" style="width: 100%; height: 100%;" frameborder="0"></iframe>
+<script type='text/javascript'>
+//<![CDATA[
+$(function() {
+//Fullscreen
+$('a.fullscreenExit').hide();
+$('a.fullscreen').on('click', function() {var docElement, request;docElement = document.documentElement;request = docElement.requestFullScreen || docElement.webkitRequestFullScreen || docElement.mozRequestFullScreen || docElement.msRequestFullScreen;if(typeof request!='undefined' && request){request.call(docElement);}$(this).hide();$('a.fullscreenExit').show();return false;});
+$('a.fullscreenExit').on('click', function() {var docElement, request;docElement = document;request = docElement.cancelFullScreen|| docElement.webkitCancelFullScreen || docElement.mozCancelFullScreen || docElement.msCancelFullScreen || docElement.exitFullscreen;if(typeof request!='undefined' && request){request.call(docElement);}
+$(this).hide();$('a.fullscreen').show();return false;});
+});
+//]]>
+</script>    
+</body>
+</html>
